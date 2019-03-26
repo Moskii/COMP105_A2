@@ -1,5 +1,3 @@
-module Assignment2 (transaction_to_string, trade_report_list, stock_test, get_trades, trade_report, update_money, profit, profit_report, complex_profit_report) where
-
 
 type Transaction = (Char, Int, Int, String, Int)
 
@@ -12,10 +10,6 @@ test_log = [('B', 100, 1104,  "VTI",  1),
             ('S', 200,   32, "ONEQ", 11),
             ('S', 100,  210, "IWRD", 12)
             ]
-
-
--- Part A
-
 
 transaction_to_string :: Transaction -> String
 transaction_to_string () = ""
@@ -52,10 +46,6 @@ trade_report str list =
       -- Shows the line breaks.
       unlines report
 
-
--- Part B
-
-
 update_money :: Transaction -> Int -> Int
 update_money (action,unit,price,stock,day) money =
     if
@@ -88,15 +78,7 @@ profit_report (x:xs) list =
     in
       x ++ ": " ++ conv ++ "\n" ++ profit_report xs list
 
-
-
-
--- Part C
-
-
 test_str_log = "BUY 100 VTI 1\nBUY 200 ONEQ 3\nBUY 50 VTI 5\nSELL 150 VTI 9\nBUY 100 IWRD 10\nSELL 200 ONEQ 11\nSELL 100 IWRD 12\n"
-
-
 
 type Prices = [(String, [Int])]
 
@@ -160,4 +142,5 @@ split_stock tuple =
       str
 
 complex_profit_report :: String -> Prices -> String
-complex_profit_report = error "Not implemented"
+complex_profit_report = error "Not implemented" 
+-- TBC

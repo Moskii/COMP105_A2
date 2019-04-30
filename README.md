@@ -1,3 +1,2 @@
-# COMP105_A2
-Second Haskell assignment
-## Assignment description
+# Stock_report
+Language used: Haskell
